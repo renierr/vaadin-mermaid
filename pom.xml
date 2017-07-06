@@ -17,6 +17,23 @@
 		<module>mermaid-demo</module>
 	</modules>
 
+	<organization>
+		<name>Renier</name>
+		<url>https://github.com/renierr/vaadin-mermaid/</url>
+	</organization>
+
+	<scm>
+		<url>git://github.com/renierr/vaadin-mermaid.git</url>
+		<connection>scm:git:git://github.com/renierr/vaadin-mermaid.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:/renierr/vaadin-mermaid.git</developerConnection>
+		<tag>Mermaid add-on for Vaadin</tag>
+	</scm>
+
+	<issueManagement>
+		<system>GitHub</system>
+		<url>https://github.com/renierr/vaadin-mermaid/issues</url>
+	</issueManagement>
+
 	<profiles>
 		<profile>
 			<!-- Vaadin pre-release repositories -->
