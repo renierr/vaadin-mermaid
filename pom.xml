@@ -17,6 +17,10 @@
 		<module>mermaid-demo</module>
 	</modules>
 
+  <properties>
+    <project.scm.id>github</project.scm.id>
+  </properties>
+
 	<organization>
 		<name>Renier</name>
 		<url>https://github.com/renierr/vaadin-mermaid/</url>
