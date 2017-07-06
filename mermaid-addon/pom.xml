@@ -32,13 +32,6 @@
 		<url>https://github.com/renierr/vaadin-mermaid/</url>
 	</organization>
 
-  <scm>
-    <url>https://github.com/renierr/vaadin-mermaid.git</url>
-    <connection>scm:git:git://github.com/renierr/vaadin-mermaid.git</connection>
-    <developerConnection>scm:git:git@github.com:/renierr/vaadin-mermaid.git</developerConnection>
-    <tag>mermaid-1.0</tag>
-  </scm>
-
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/renierr/vaadin-mermaid/issues</url>
