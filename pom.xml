@@ -27,8 +27,7 @@
 
 	<scm>
 		<url>https://github.com/renierr/vaadin-mermaid.git</url>
-		<connection>scm:git:git://github.com/renierr/vaadin-mermaid.git</connection>
-		<developerConnection>scm:git:git://github.com/renierr/vaadin-mermaid.git</developerConnection>
+		<connection>scm:git:https://github.com/renierr/vaadin-mermaid.git</connection>
 		<tag>mermaid-1.0</tag>
 	</scm>
 
