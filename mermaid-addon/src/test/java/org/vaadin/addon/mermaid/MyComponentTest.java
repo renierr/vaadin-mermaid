@@ -1,4 +1,4 @@
-package de.hlp.vaadin.addon.mermaid;
+package org.vaadin.addon.mermaid;
 
 import junit.framework.Assert;
 import org.junit.Test;

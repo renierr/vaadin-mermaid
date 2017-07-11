@@ -1,4 +1,4 @@
-package de.hlp.vaadin.addon.mermaid.demo;
+package org.vaadin.addon.mermaid.demo;
 
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
@@ -12,7 +12,7 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
-import de.hlp.vaadin.addon.mermaid.MermaidChart;
+import org.vaadin.addon.mermaid.MermaidChart;
 
 import javax.servlet.annotation.WebServlet;
 

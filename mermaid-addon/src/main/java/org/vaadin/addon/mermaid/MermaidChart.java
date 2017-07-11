@@ -1,4 +1,4 @@
-package de.hlp.vaadin.addon.mermaid;
+package org.vaadin.addon.mermaid;
 
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.StyleSheet;
