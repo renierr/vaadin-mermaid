@@ -1,4 +1,4 @@
-window.de_hlp_vaadin_addon_mermaid_MermaidChart = function() {
+window.org_vaadin_addon_mermaid_MermaidChart = function() {
   var element = this.getElement();
   var self = this;
   var insertSvg;
