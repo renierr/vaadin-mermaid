@@ -12,7 +12,6 @@ import com.vaadin.ui.Notification;
 import com.vaadin.ui.TextArea;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
-import com.vaadin.ui.themes.ValoTheme;
 import de.hlp.vaadin.addon.mermaid.MermaidChart;
 
 import javax.servlet.annotation.WebServlet;
