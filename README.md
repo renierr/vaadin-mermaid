@@ -1,10 +1,11 @@
-# Mermaid Add-on for Vaadin 8
+# Mermaid Add-on for Vaadin 7
 
-${ComponentClassName} is a UI component add-on for Vaadin 8.
+Vaadin-Mermaid is a Javascript UI component add-on for Vaadin 7.
+It uses the Mermaid Javascript lib to generate Charts via a simple description language.
+See http://knsv.github.io/mermaid/ for more details on how to generate a Chart.
 
-## Online demo
-
-Try the add-on demo at <url of the online demo>
+For the Addon simply pass the description for the Chart and a Component will be rendered.
+Additionally you can add listener to react on clicks to the Chart.
 
 ## Download release
 
@@ -51,15 +52,9 @@ Debugging client side code in the mermaid-demo project:
  
 ## Release notes
 
-### Version 1.0-SNAPSHOT
-- ...
-- ...
+### Version 1.0
+- Initial Version
 
-## Roadmap
-
-This component is developed as a hobby with no public roadmap or any guarantees of upcoming releases. That said, the following features are planned for upcoming releases:
-- ...
-- ...
 
 ## Issue tracking
 
@@ -79,29 +74,24 @@ Contributions are welcome, but there are no guarantees that they are accepted as
 
 Add-on is distributed under Apache License 2.0. For license terms, see LICENSE.txt.
 
-MyComponent is written by <...>
-
 # Developer Guide
 
 ## Getting started
 
 Here is a simple example on how to try out the add-on component:
 
-<...>
+```Java
+  private static final String DEMO_CHART = "graph LR;\n" +
+      "  a(Find elements)-->b{Processed}\n" +
+      "  b-->|Yes|c(Leave element)\n" +
+      "  b-->|No |d(Transform)\n" +
+      "  click b \"http://www.github.com\" \"This is a tooltip for a link\"";
+
+  final MermaidChart component = new MermaidChart(DEMO_CHART);
+  component.addStateClickListener(val -> Notification.show("You clicked on id: " + val));
+  
+```
+
 
 For a more comprehensive example, see src/test/java/org/vaadin/template/demo/DemoUI.java
-
-## Features
-
-### Feature A
-
-<...>
-
-### Feature B
-
-<...>
-
-### Feature C
-
-<...>
 
