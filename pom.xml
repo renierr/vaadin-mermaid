@@ -36,7 +36,14 @@
 		<url>https://github.com/renierr/vaadin-mermaid/issues</url>
 	</issueManagement>
 
-	<build>
+  <distributionManagement>
+    <repository>
+      <id>hlp-external</id>
+      <url>https://artifactory.hlp.de/artifactory/hlp-external</url>
+    </repository>
+  </distributionManagement>
+
+  <build>
 		<plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
