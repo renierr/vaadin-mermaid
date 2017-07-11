@@ -65,7 +65,7 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>de.hlp.vaadin.addon</groupId>
+			<groupId>org.vaadin.addon</groupId>
 			<artifactId>mermaid</artifactId>
 			<version>${project.version}</version>
 		</dependency>
