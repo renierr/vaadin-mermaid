@@ -3,14 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>mermaid</artifactId>
 	<packaging>jar</packaging>
-	<version>1.1</version>
+	<version>1.2-SNAPSHOT</version>
 	<name>Mermaid</name>
 
 	<parent>
 		<relativePath>../pom.xml</relativePath>
 		<groupId>org.vaadin.addon</groupId>
 		<artifactId>mermaid-root</artifactId>
-		<version>1.1</version>
+		<version>1.2-SNAPSHOT</version>
 	</parent>
 
 	<prerequisites>
