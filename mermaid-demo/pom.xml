@@ -4,7 +4,7 @@
 	<groupId>org.vaadin.addon</groupId>
 	<artifactId>mermaid-demo</artifactId>
 	<packaging>war</packaging>
-	<version>1.3-SNAPSHOT</version>
+	<version>1.3</version>
 	<name>Mermaid Add-on Demo</name>
 
 	<organization>
@@ -15,7 +15,7 @@
 	<scm>
 		<url>https://github.com/renierr/vaadin-mermaid.git</url>
 		<connection>scm:git:https://github.com/renierr/vaadin-mermaid.git</connection>
-		<tag>mermaid-1.0</tag>
+		<tag>mermaid-1.3</tag>
 	</scm>
 
 	<issueManagement>
