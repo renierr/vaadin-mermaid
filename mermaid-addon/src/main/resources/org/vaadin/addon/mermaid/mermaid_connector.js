@@ -45,7 +45,6 @@ window.org_vaadin_addon_mermaid_MermaidChart = function() {
         ret = ret.replace(new RegExp('xmlns:xml="http://www.w3.org/XML/1998/namespace"', 'gi'), "");
         ret = ret.replace(new RegExp('NS\\d+:ns\\d+:', 'gi'), "");
         ret = ret.replace(new RegExp('xmlns:NS\\d+=""', 'gi'), "");
-        console.log(ret);
         return ret;
       },
       enumerable: false,
@@ -87,8 +86,24 @@ window.org_vaadin_addon_mermaid_MermaidChart = function() {
 
   this.downloadAsImage = function(filename) {
     filename = filename || "svg.png";
-    console.log("down element: " + element.children[0]);
     var simg = new Simg(element.children[0]);
-    simg.download(filename);
+    if (navigator.msSaveOrOpenBlob) {
+      try {
+        // edge can handle canvas
+        if (detectIE() > 11) {
+          simg.toBinaryBlob(function (blob) {
+            navigator.msSaveOrOpenBlob(blob, filename);
+          });
+        } else {
+          var byteString = simg.toString(simg.svg);
+          var blob = new Blob([byteString], {type: "image/svg+xml"});
+          navigator.msSaveOrOpenBlob(blob, filename.replace("\.png", "") + ".svg");
+          }
+      } catch (err) {
+        console.log(err);
+      }
+     } else {
+      simg.download(filename.replace("\.png", ""));
+    }
   }
 };

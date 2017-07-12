@@ -101,7 +101,7 @@
     toBinaryBlob: function(cb){
       this.toCanvas(function(canvas){
         var dataUrl = canvas.toDataURL().replace(/^data:image\/(png|jpg);base64,/, "");
-        var byteString = atob(escape(dataUrl));
+        var byteString = atob(dataUrl);
         // write the bytes of the string to an ArrayBuffer
         var ab = new ArrayBuffer(byteString.length);
         var ia = new Uint8Array(ab);
