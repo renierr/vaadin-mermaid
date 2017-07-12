@@ -43,16 +43,6 @@
 		<jetty.plugin.version>9.3.9.v20160517</jetty.plugin.version>
 	</properties>
 
-	<organization>
-		<name>Renier</name>
-		<url>https://github.com/renierr/vaadin-mermaid/</url>
-	</organization>
-
-	<issueManagement>
-		<system>GitHub</system>
-		<url>https://github.com/renierr/vaadin-mermaid/issues</url>
-	</issueManagement>
-
 	<licenses>
 		<license>
 			<name>Apache 2</name>
@@ -139,6 +129,15 @@
 					</execution>
 				</executions>
 			</plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+        <configuration>
+          <autoVersionSubmodules>true</autoVersionSubmodules>
+        </configuration>
+      </plugin>
 
 			<!-- The Jetty plugin allows us to easily test the development build by -->
 			<!-- running jetty:run on the command line. -->
