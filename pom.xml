@@ -4,7 +4,7 @@
 	<groupId>org.vaadin.addon</groupId>
 	<artifactId>mermaid-root</artifactId>
 	<packaging>pom</packaging>
-	<version>1.2-SNAPSHOT</version>
+	<version>1.2</version>
 	<name>Mermaid Add-on Root Project</name>
 
 	<prerequisites>
@@ -28,7 +28,7 @@
 	<scm>
 		<url>https://github.com/renierr/vaadin-mermaid.git</url>
 		<connection>scm:git:https://github.com/renierr/vaadin-mermaid.git</connection>
-		<tag>mermaid-1.0</tag>
+		<tag>mermaid-1.2</tag>
 	</scm>
 
 	<issueManagement>
