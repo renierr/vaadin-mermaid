@@ -8,7 +8,7 @@ import com.vaadin.ui.JavaScriptFunction;
 import java.util.LinkedList;
 import java.util.List;
 
-@JavaScript({"mermaid.min.js", "mermaid_connector.js"})
+@JavaScript({"mermaid.min.js", "mermaid_connector.js", "simg.min.js",})
 @StyleSheet({"mermaid.css"})
 public class MermaidChart extends AbstractJavaScriptComponent {
 
@@ -47,6 +47,10 @@ public class MermaidChart extends AbstractJavaScriptComponent {
     if (data != null) {
       getState().data = data;
     }
+  }
+
+  public void downloadImage(String filename) {
+    callFunction("downloadAsImage", filename);
   }
 
   public void addStateClickListener(StateClickListener listener) {

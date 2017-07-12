@@ -6,6 +6,31 @@ window.org_vaadin_addon_mermaid_MermaidChart = function() {
   var id = 'mermaidChart';
   var callListener = false;
 
+  if (navigator.userAgent.search("MSIE") >= 0) {
+    Object.defineProperty(SVGElement.prototype, 'outerHTML', {
+      get: function () {
+        var $node, $temp;
+        $temp = document.createElement('div');
+        $node = this.cloneNode(true);
+        $temp.appendChild($node);
+        var ret = $temp.innerHTML;
+        // cleanup for IE
+        ret = ret.replace(new RegExp('NS\\d+:xmlns:xml="http://www.w3.org/XML/1998/namespace"', 'gi'), "");
+        ret = ret.replace(new RegExp('NS\\d+:xmlns:ns\\d+="http://www.w3.org/XML/1998/namespace"', 'gi'), "");
+        ret = ret.replace(new RegExp('xmlns:ns\\d+="http://www.w3.org/XML/1998/namespace"', 'gi'), "");
+        ret = ret.replace(new RegExp('xml:', 'gi'), "");
+        ret = ret.replace(new RegExp('ns\\d+:', 'gi'), "");
+        ret = ret.replace(new RegExp('xmlns:xml="http://www.w3.org/XML/1998/namespace"', 'gi'), "");
+        ret = ret.replace(new RegExp('NS\\d+:ns\\d+:', 'gi'), "");
+        ret = ret.replace(new RegExp('xmlns:NS\\d+=""', 'gi'), "");
+        console.log(ret);
+        return ret;
+      },
+      enumerable: false,
+      configurable: true
+    });
+  }
+
   this.onStateChange = function() {
     if (typeof insertSvg === 'undefined') {
       mermaid.initialize({
@@ -36,5 +61,12 @@ window.org_vaadin_addon_mermaid_MermaidChart = function() {
     }
     mermaid.render(id, this.getState().data, insertSvg, element);
     callListener = this.getState().callListener;
+  };
+
+  this.downloadAsImage = function(filename) {
+    filename = filename || "svg.png";
+    console.log("down element: " + element.children[0]);
+    var simg = new Simg(element.children[0]);
+    simg.download(filename);
   }
 };

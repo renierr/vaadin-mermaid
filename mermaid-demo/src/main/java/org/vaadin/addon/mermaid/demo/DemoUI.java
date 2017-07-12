@@ -79,7 +79,8 @@ public class DemoUI extends UI {
     Button demo1 = new Button("Demo Chart 1", click -> textArea.setValue(DEMO_CHART));
     Button demo2 = new Button("Demo Chart 2", click -> textArea.setValue(DEMO_CHART2));
     Button demo3 = new Button("Demo Chart 3", click -> textArea.setValue(DEMO_CHART3));
-    HorizontalLayout demoButtons = new HorizontalLayout(demo1, demo2, demo3);
+    Button download = new Button("Download", click -> component.downloadImage("myfile.png"));
+    HorizontalLayout demoButtons = new HorizontalLayout(demo1, demo2, demo3, download);
 
     component.addStateClickListener(val -> Notification.show("You clicked on id: " + val));
     // Show it in the middle of the screen
