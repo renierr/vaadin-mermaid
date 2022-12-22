@@ -55,6 +55,7 @@ window.org_vaadin_addon_mermaid_MermaidChart = function() {
   this.onStateChange = function() {
     if (typeof insertSvg === 'undefined') {
       mermaid.initialize({
+        securityLevel: 'loose',
         startOnLoad: false,
         flowchart:{
           useMaxWidth: false,

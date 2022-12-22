@@ -1,15 +1,13 @@
 package org.vaadin.addon.mermaid;
 
 import com.vaadin.annotations.JavaScript;
-import com.vaadin.annotations.StyleSheet;
 import com.vaadin.ui.AbstractJavaScriptComponent;
 import com.vaadin.ui.JavaScriptFunction;
 
 import java.util.LinkedList;
 import java.util.List;
 
-@JavaScript({"mermaid.min.js", "mermaid_connector.js", "simg.min.js",})
-@StyleSheet({"mermaid.css"})
+@JavaScript({"mermaid.min.js", "d3.min.js", "mermaid_connector.js", "simg.min.js",})
 public class MermaidChart extends AbstractJavaScriptComponent {
 
   private final List<StateClickListener> stateClickListenerList = new LinkedList<>();
