@@ -4,7 +4,7 @@
 	<groupId>org.vaadin.addon</groupId>
 	<artifactId>mermaid-demo</artifactId>
 	<packaging>war</packaging>
-	<version>1.4</version>
+	<version>1.5-SNAPSHOT</version>
 	<name>Mermaid Add-on Demo</name>
 
 	<organization>
